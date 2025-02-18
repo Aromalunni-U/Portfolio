@@ -29,6 +29,21 @@
 		html {
 			scroll-behavior: smooth;
 		}
+		/* Media query for responsive layout */
+	@media (max-width: 768px) {
+		.banner_inner {
+			flex-direction: column; /* Stack the content vertically on smaller screens */
+			text-align: center; /* Center-align the text */
+		}
+		.media-left {
+			padding-left: 0;
+			margin-bottom: 20px; /* Add space between image and text */
+			text-align: center; /* Center the image */
+		}
+		.media-body {
+			padding-left: 0;
+		}
+	}
 	</style>
 </head>
 
@@ -41,20 +56,22 @@
 				<div class="container box_1620">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<h1 class="text-light">Portfolio</h1>
-
+	
+					<!-- Custom Navbar Toggle Icon -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<i class="fa fa-bars" style="font-size: 30px; color: #fff;"></i> <!-- Custom toggle icon (Font Awesome) -->
+					</button>
+	
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 							<li class="nav-item submenu dropdown">
-								<a href="#skills" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
-									aria-expanded="false">skills</a>
-
+								<a href="#skills" class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Skills</a>
 							</li>
 							<li class="nav-item submenu dropdown">
-								<a href="#projects" class="nav-link dropdown-toggle" role="button" aria-haspopup="true"
-									aria-expanded="false">Project</a>
+								<a href="#projects" class="nav-link dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Project</a>
 							</li>
 							<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 						</ul>
@@ -63,6 +80,7 @@
 			</nav>
 		</div>
 	</header>
+	
 	<!--================Header Menu Area =================-->
 
 	<!--================Home Banner Area =================-->
@@ -71,37 +89,30 @@
 			<div class="banner_inner row d-flex align-items-center">
 				<div class="banner_content">
 					<div class="media">
-						<div class="" style="width: 300px; padding-left: 50px;">
-							<img src="img/portfolioimg.jpg" alt="" style="border-radius: 50%;height: 300px;width: 280px; ">
+						<div class="media-left" style="width: 310px; padding-left: 50px;">
+							<img src="img/portfolioimg.jpg" alt="" class="img-fluid" style="border-radius: 50%; height: 300px; width: 280px;">
 						</div>
-
-						<div class="media-body" style="padding-left: 100px;">
-							<div class="personal_text ">
-								<h6>Hello Everybody, i am</h6>
+	
+						<div class="media-body" style="padding-left: 70px;">
+							<div class="personal_text">
+								<h6>Hello Everybody, I am</h6>
 								<h2 class="text-light">Aromalunni U</h2>
 								<h4 class="text-light">AI Developer</h4>
-								<p class="text-light">Passionate about building intelligent solutions and leveraging
-									data to solve real-world problems.</p>
-
+								<p class="text-light">Passionate about building intelligent solutions and leveraging data to solve real-world problems.</p>
+	
 								<ul class="list basic_info">
-									<li><a href="#"><i class="lnr lnr-calendar-full text-warning "></i> <b
-												class="text-light"> 20 May,
-												2003 </b></a></li>
-									<li><a href="#"><i class="lnr lnr-phone-handset text-warning"></i> <b
-												class="text-light">7736702428</b></a></li>
-									<li><a href="#"><i class="lnr lnr-envelope text-warning"></i> <b class="text-light">
-												aromalunniu07@gmail.com</b></a></li>
-									<li><a href="#"><i class="lnr lnr-home text-warning"></i> <b
-												class="text-light">Alappuzha</b></a>
-									</li>
+									<li><a href="#" style="display: flex; align-items: center;"><i class="lnr lnr-calendar-full text-warning"></i> <b class="text-light" style="margin-left: 8px;">20 May, 2003</b></a></li>
+									<li><a href="#" style="display: flex; align-items: center;"><i class="lnr lnr-phone-handset text-warning"></i> <b class="text-light" style="margin-left: 8px;">7736702428</b></a></li>
+									<li><a href="#" style="display: flex; align-items: center;"><i class="lnr lnr-envelope text-warning"></i> <b class="text-light" style="margin-left: 8px;">aromalunniu07@gmail.com</b></a></li>
+									<li><a href="#" style="display: flex; align-items: center;"><i class="lnr lnr-home text-warning"></i> <b class="text-light" style="margin-left: 8px;">Alappuzha</b></a></li>
 								</ul>
+	
 								<ul class="list personal_social">
-									<li><a href="https://github.com/Aromalunni-U"><i class="fa fa-github "></i></a></li>
+									<li><a href="https://github.com/Aromalunni-U"><i class="fa fa-github"></i></a></li>
 									<li><a href="https://www.linkedin.com/in/aromalunni-u/"><i class="fa fa-linkedin"></i></a></li>
 								</ul>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -115,9 +126,12 @@
 			<div class="row d-flex justify-content-center">
 				<div class="col-md-6  p-3" style="width: 400px;">
 					<h1 class="text-center pb-3 text-dark">Education</h1>
-					<h5 class="text-dark">Carmel College Muhamma (2021-2024)</h5>
-					<h5 class="text-dark">Bachelor of Computer Applications (BCA)</h5>
+					<ul>
+						<li class="text-dark">Carmel College Muhamma (2021-2024)</li>
+						<li class="text-dark">Bachelor of Computer Applications (BCA)</li>
+						<li class="text-dark">TDHSS Thuravoor (Secondary Education - Bio-Maths)</li>
 
+					  </ul>
 				</div>
 
 				<div class="col-md-6 mb-3 p-3">
